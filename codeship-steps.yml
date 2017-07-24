@@ -1,6 +1,7 @@
-- name: sourceclear
+- name: codeclimate_pre
   service: web_codeship_example_node
-  command: curl -sSL https://download.sourceclear.com/ci.sh | bash
+  command: cc-test-reporter before-build
+
 # #
 # - type: parallel
 #   steps:
@@ -10,6 +11,11 @@
 #   - name: tests
 #     service: web_codeship_example_node
 #     command: bin/ci "npm test -- --forceExit"
+
+- name: codeclimate_post
+  service: web_codeship_example_node
+  command: cc-test-reporter after-build --exit-code $?
+
 # - name: deploy
 #   tag: master
 #   service: codeship_heroku_deployment
