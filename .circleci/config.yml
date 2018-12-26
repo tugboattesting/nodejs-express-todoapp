@@ -18,6 +18,15 @@ jobs:
 
     steps:
       - checkout
-      
+
+      # run tests!
+      - run: sleep 30
+
+      # run tests!
+      - run: ls -la
+
       # run tests!
       - run: pwd
+
+      # run tests!
+      - run: whoami
