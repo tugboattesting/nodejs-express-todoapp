@@ -20,19 +20,13 @@ jobs:
       - checkout
 
       # run tests!
-      - run: apk update && apk add postgresql
-
-      # run tests!
       - run: npm install
 
       # run tests!
       - run: pwd
 
       # run tests!
-      - run: whoami
+      - run: npm run migrate
 
       # run tests!
-      - run: npm run lint
-
-      # run tests!
-      - run: /bin/sh -c "npm run migrate && npm test -- --forceExit"
+      - run: npm test
