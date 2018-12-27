@@ -23,6 +23,9 @@ jobs:
       - checkout
 
       # run tests!
+      - run: wait 45
+
+      # run tests!
       - run: npm install
 
       # run tests!
