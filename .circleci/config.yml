@@ -10,8 +10,8 @@ jobs:
       - image: circleci/node:7.10
       - image: circleci/postgres:9.6-alpine
         environment:
-          POSTGRES_USER: circleci-test
-          POSTGRES_DB: circle_test
+          POSTGRES_USER: todoapp
+          POSTGRES_DB: todos
       # Specify service dependencies here if necessary
       # CircleCI maintains a library of pre-built images
       # documented at https://circleci.com/docs/2.0/circleci-images/
