@@ -22,8 +22,5 @@ jobs:
     steps:
       - checkout
       - run: sudo apt-get update
-      - run: sleep 30
-      - run: sudo apt-get install postgresql-client
       - run: npm install
-      - run: npm run migrate
       - run: npm test
